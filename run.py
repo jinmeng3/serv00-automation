@@ -32,7 +32,7 @@ user_list, hostname_list = ssh_multiple_connections(hosts_info, command)
 user_num = len(user_list)
 content = "SSH服务器登录信息：\n"
 for user, hostname in zip(user_list, hostname_list):
-    content += f"用户名：{user}，服务器：{hostname}\n"
+    content += f"用户名：user1，服务器：{hostname}\n"
 beijing_timezone = timezone(timedelta(hours=8))
 time = datetime.now(beijing_timezone).strftime('%Y-%m-%d %H:%M:%S')
 menu = requests.get('https://api.zzzwb.com/v1?get=tg').json()
